@@ -5,13 +5,13 @@ const http = require('http');
 
 const { Server } = require('socket.io');
 
-// initialization
+  // initialization
 
-const io = new Server(server, {
+  const io = new Server(server, {
     cors: {
         origin:'*'
     }
-});
+  });
 
 io.on('connection', (socket) => {
 
