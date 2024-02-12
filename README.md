@@ -13,10 +13,13 @@ const io = new Server(server, {
 });
 
 io.on('connection', (socket) => {
+
    // sending data to client
+   
     socket.emit('Welcome', "welcome to my channel");
 
   // reciving dat from client
+  
     socket.on('msg', (data) => {
         console.log("msg", data);
     });
